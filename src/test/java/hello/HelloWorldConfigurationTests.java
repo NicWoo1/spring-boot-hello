@@ -52,6 +52,6 @@ public class HelloWorldConfigurationTests {
 		ResponseEntity<String> entity = restTemplate
 				.getForEntity("http://localhost:" + this.port + "/test", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
-		//assertEquals("test new APi - new content",entity.getBody());
+		assertEquals("test new API",entity.getBody());
 	}
 }

@@ -47,4 +47,11 @@ public class HelloWorldConfigurationTests {
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
+	@Test
+	public void TestPipeLine() throws Exception {
+		ResponseEntity<String> entity = restTemplate
+				.getForEntity("http://localhost:" + this.port + "/test", String.class);
+		assertEquals(HttpStatus.OK, entity.getStatusCode());
+		//assertEquals("test new APi - new content",entity.getBody());
+	}
 }
